@@ -1,9 +1,46 @@
 html {
-    font-family: arial;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #9921e8;
+    background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+    min-height: 100vh;
+
+
 }
 
 .container {
     margin: 5%;
+    padding: 5%;
+    min-height: 50vh;
+    background-color: whitesmoke;
+    border-radius: 3%;
+}
+
+input {
+    padding: 5px;
+}
+
+button {
+    text-decoration: none;
+    text-align: center;
+    color: #5f72be;
+    border: 2px solid #5f72be;
+    border-radius: 4px;
+    padding: 5px;
+    display: inline-block;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #5f72be;
+    color: whitesmoke;
+}
+
+.add {
+    margin-right: 15px;
 }
 
 li {

@@ -1,10 +1,17 @@
 const addInput = document.querySelector(".add");
-const button = document.querySelector("button");
+const form = document.querySelector("form");
 const searchInput = document.querySelector(".search");
 const ul = document.querySelector("ul");
 const taskNumber = document.querySelector('h3 span');
 
 const tasksList = [];
+
+const removeTask = (e) => {
+    e.target.parentNode.remove();
+    const index = e.target.parentNode.dataset.key;
+    tasksList.splice(index, 1)
+    taskNumber.textContent = tasksList.length;
+}
 
 const addTask = (e) => {
     e.preventDefault();
@@ -16,6 +23,7 @@ const addTask = (e) => {
     tasksList.push(task);
     addInput.value = "";
     taskNumber.textContent = tasksList.length;
+    task.querySelector('button').addEventListener('click', removeTask);
 }
 
-button.addEventListener("click", addTask);
+form.addEventListener("submit", addTask);
