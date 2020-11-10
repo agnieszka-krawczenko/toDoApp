@@ -3,7 +3,6 @@ const form = document.querySelector("form");
 const searchInput = document.querySelector(".search");
 const ul = document.querySelector("ul");
 const taskNumber = document.querySelector('h3 span');
-
 const tasksList = [];
 
 const removeTask = (e) => {
@@ -26,4 +25,14 @@ const addTask = (e) => {
     task.querySelector('button').addEventListener('click', removeTask);
 }
 
+const searchTasks = (e) => {
+    const liElements = document.querySelectorAll('li');
+    const searchTask = e.target.value.toLowerCase();
+    let tasks = [...liElements];
+    tasks = tasks.filter(li => li.textContent.toLowerCase().includes(searchTask));
+    ul.textContent = "";
+    tasks.forEach(li => ul.appendChild(li));
+}
+
 form.addEventListener("submit", addTask);
+searchInput.addEventListener("input", searchTasks);

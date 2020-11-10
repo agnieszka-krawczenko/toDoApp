@@ -6,7 +6,7 @@ body {
     background-color: #9921e8;
     background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
     min-height: 100vh;
-
+    color: #20294d;
 
 }
 
@@ -15,7 +15,11 @@ body {
     padding: 5%;
     min-height: 50vh;
     background-color: whitesmoke;
-    border-radius: 3%;
+    border-radius: 15px;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 input {
